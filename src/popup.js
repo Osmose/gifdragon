@@ -99,16 +99,23 @@ async function handleClickCategory(event) {
   while (imageList.hasChildNodes()) {
     imageList.removeChild(imageList.lastChild);
   }
+
+  const imgPromises = [];
   for (const url of category.urls) {
     const img = document.createElement('img');
+    imgPromises.push(new Promise((resolve, reject) => {
+      img.onload = () => resolve();
+      img.onerror = () => reject();
+    }));
     img.src = url;
     imageList.appendChild(img);
   }
 
-  new Masonry(imageList, {
+  const masonry = new Masonry(imageList, {
     itemSelector: 'img',
     columnWidth: 200,
   });
+  imgPromises.forEach(promise => promise.then(() => masonry.layout()));
 
   imagePage.classList.add('in-view');
 }
