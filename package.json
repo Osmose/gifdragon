@@ -1,0 +1,16 @@
+{
+  "name": "gifdragon",
+  "version": "0.1.0",
+  "description": "An extension for saving GIF urls",
+  "private": true,
+  "scripts": {
+    "start": "web-ext run --source-dir ./src/",
+    "build": "web-ext build --source-dir ./src/",
+    "lint": "eslint ./src/"
+  },
+  "author": "Michael Kelly",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}

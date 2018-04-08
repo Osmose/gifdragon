@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  background: #fcfcfc;
+  color: #151515;
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  background: #fcfcfc;
+}
+
+.header {
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.header .title {
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#categories {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#categories li {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+#categories li:hover {
+  background: #ececec;
+}
+
+.add-category-container {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+#add-category {
+  text-decoration: none;
+  color: #151515;
+}
+
+#add-category img {
+  vertical-align: -3px;
+}
+
+.category {
+  position: relative;
+}
+
+.edit-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+
+.category:hover .name:not([contentEditable="true"]) ~ .edit-button {
+  display: block;
+}
+
+.delete-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+
+.name[contentEditable="true"] ~ .delete-button {
+  display: block;
+}
+
+#page-images {
+  background: #FFF;
+  position: absolute;
+  left: 500px;
+  z-index: 100;
+  transition: left 0.5s;
+}
+
+#page-images.in-view {
+  left: 0;
+}
+
+#images-back {
+  position: absolute;
+  padding: 6px 6px 5px;
+  top: 4px;
+  left: 4px;
+}
+
+#images-back:hover {
+  background: #ececec;
+}
+
+#images {
+  margin: 0;
+  padding: 0;
+}
+
+#images img {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}

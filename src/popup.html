@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <div id="page-categories" class="container">
+      <div class="header">
+        <h1 class="title">GIFDragon</h1>
+      </div>
+      <div class="content">
+        <ul id="categories"></ul>
+        <div class="add-category-container">
+          <a id="add-category" href="#"><img src="chrome://browser/skin/zoom-in.svg"> Add Category</a>
+        </div>
+      </div>
+    </div>
+    <div id="page-images" class="container">
+      <div class="header">
+        <a href="#" id="images-back"><img src="chrome://browser/skin/arrow-left.svg"></a>
+        <h1 class="title"></h1>
+      </div>
+      <div class="content">
+        <div id="images"></div>
+      </div>
+    </div>
+    <script src="Category.js"></script>
+    <script src="masonry.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
