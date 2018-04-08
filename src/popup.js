@@ -19,7 +19,7 @@ function createCategoryLi(category) {
   nameSpan.addEventListener('blur', async () => {
     if (nameSpan.isContentEditable) {
       category.name = nameSpan.textContent;
-      await category.save();
+      await category.save()s;
 
       nameSpan.contentEditable = "false";
     }
